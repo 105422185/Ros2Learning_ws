@@ -1,0 +1,27 @@
+[1.013s] Invoking command in '/home/cix/Ros2Learning_ws/src/my_package': PYTHONPATH=/home/cix/Ros2Learning_ws/build/my_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cix/Ros2Learning_ws/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_package build --build-base /home/cix/Ros2Learning_ws/build/my_package/build install --record /home/cix/Ros2Learning_ws/build/my_package/install.log --install-scripts $base/lib/my_package --single-version-externally-managed install_data
+[1.222s] running egg_info
+[1.234s] writing ../../build/my_package/my_package.egg-info/PKG-INFO
+[1.235s] writing dependency_links to ../../build/my_package/my_package.egg-info/dependency_links.txt
+[1.235s] writing entry points to ../../build/my_package/my_package.egg-info/entry_points.txt
+[1.235s] writing requirements to ../../build/my_package/my_package.egg-info/requires.txt
+[1.236s] writing top-level names to ../../build/my_package/my_package.egg-info/top_level.txt
+[1.261s] reading manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'
+[1.262s] writing manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'
+[1.262s] running build
+[1.262s] running build_py
+[1.262s] copying my_package/my_node.py -> /home/cix/Ros2Learning_ws/build/my_package/build/lib/my_package
+[1.262s] copying my_package/__init__.py -> /home/cix/Ros2Learning_ws/build/my_package/build/lib/my_package
+[1.262s] running install
+[1.268s] running install_lib
+[1.280s] copying /home/cix/Ros2Learning_ws/build/my_package/build/lib/my_package/my_node.py -> /home/cix/Ros2Learning_ws/install/my_package/lib/python3.10/site-packages/my_package
+[1.281s] byte-compiling /home/cix/Ros2Learning_ws/install/my_package/lib/python3.10/site-packages/my_package/my_node.py to my_node.cpython-310.pyc
+[1.281s] running install_data
+[1.281s] copying resource/my_package -> /home/cix/Ros2Learning_ws/install/my_package/share/ament_index/resource_index/packages
+[1.281s] copying package.xml -> /home/cix/Ros2Learning_ws/install/my_package/share/my_package
+[1.281s] running install_egg_info
+[1.296s] removing '/home/cix/Ros2Learning_ws/install/my_package/lib/python3.10/site-packages/my_package-0.0.0-py3.10.egg-info' (and everything under it)
+[1.299s] Copying ../../build/my_package/my_package.egg-info to /home/cix/Ros2Learning_ws/install/my_package/lib/python3.10/site-packages/my_package-0.0.0-py3.10.egg-info
+[1.300s] running install_scripts
+[1.418s] Installing my_node script to /home/cix/Ros2Learning_ws/install/my_package/lib/my_package
+[1.418s] writing list of installed files to '/home/cix/Ros2Learning_ws/build/my_package/install.log'
+[1.462s] Invoked command in '/home/cix/Ros2Learning_ws/src/my_package' returned '0': PYTHONPATH=/home/cix/Ros2Learning_ws/build/my_package/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cix/Ros2Learning_ws/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_package build --build-base /home/cix/Ros2Learning_ws/build/my_package/build install --record /home/cix/Ros2Learning_ws/build/my_package/install.log --install-scripts $base/lib/my_package --single-version-externally-managed install_data
