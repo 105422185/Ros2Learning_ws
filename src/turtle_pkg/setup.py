@@ -26,6 +26,7 @@ setup(
         'console_scripts': [
             'turtle_ctrl_node = turtle_pkg.turtle_ctrl_node:main',
             'turtle_ctrl_gui_node = turtle_pkg.turtle_ctrl_gui_node:main',
+            'turtle_ctrl_advanced_gui_node = turtle_pkg.turtle_ctrl_advanced_gui_node:main',
         ],
     },
 )
