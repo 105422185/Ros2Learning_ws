@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<robot name="gripper" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- ========== 底座 ========== -->
+    <link name="gripper_base_link">
+        <visual>
+            <geometry>
+                <box size="0.2 0.06 0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.01" rpy="0 0 0"/>
+            <material name="purple"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.2 0.06 0.02"/>
+            </geometry>
+            <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <!-- ========== 左手指 ========== -->
+    <link name="left_finger_link">
+        <visual>
+            <geometry>
+                <box size="0.02 0.06 0.08"/>
+            </geometry>
+            <origin xyz="0 0 0.04" rpy="0 0 0"/>
+            <material name="green"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.02 0.06 0.08"/>
+            </geometry>
+            <origin xyz="0 0 0.04" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <!-- ========== 右手指 ========== -->
+    <link name="right_finger_link">
+        <visual>
+            <geometry>
+                <box size="0.02 0.06 0.08"/>
+            </geometry>
+            <origin xyz="0 0 0.04" rpy="0 0 0"/>  <!-- -0.005（半宽） -->
+            <material name="green"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.02 0.06 0.08"/>
+            </geometry>
+            <origin xyz="0 0 0.04" rpy="0 0 0"/>
+        </collision>
+    </link>
+
+    <!-- ========== 左关节（沿X正方向张开） ========== -->
+    <joint name="left_finger_joint" type="prismatic">
+        <parent link="gripper_base_link"/>
+        <child link="left_finger_link"/>
+        <origin xyz="0.01 0 0.02" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit velocity="0.5" effort="100" lower="0" upper="0.06"/>
+    </joint>
+
+    <!-- ========== 右关节（沿X负方向张开，镜像对称） ========== -->
+    <joint name="right_finger_joint" type="prismatic">
+        <parent link="gripper_base_link"/>
+        <child link="right_finger_link"/>
+        <origin xyz="-0.01 0 0.02" rpy="0 0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit velocity="0.5" effort="100" lower="0" upper="0.06"/>
+        <mimic joint="left_finger_joint" multiplier="1" offset="0"/>
+    </joint>
+
+</robot>

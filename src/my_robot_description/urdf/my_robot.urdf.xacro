@@ -3,5 +3,13 @@
 
     <xacro:include filename="common_properties.xacro" />
     <xacro:include filename="arm.xacro" />
+    <xacro:include filename="gripper.xacro" />
+
+    <!-- 把夹爪固定到机械臂末端的 tool_link 上 -->
+    <joint name="tool_gripper_joint" type="fixed">
+        <parent link="tool_link"/>
+        <child link="gripper_base_link"/>
+        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+    </joint>
 
 </robot>
